@@ -81,7 +81,7 @@ def main_inline_keyboard(user_id):
         markup.add(types.InlineKeyboardButton("⚠️ حذف جميع الملفات (أدمن)", callback_data="admin_delete_all_files"))
     else:
       if user_db.get(uid, {}).get("type") == "month":
-    markup.add(types.InlineKeyboardButton("👑 اشتراك VIP شهري فعال", callback_data="vip_status"))
+          markup.add(types.InlineKeyboardButton("👑 اشتراك VIP شهري فعال", callback_data="vip_status"))
     
     markup.add(types.InlineKeyboardButton("🛠️ الدعم الفني | تفعيل اشتراك", url="https://t.me/QW_LE1"))
     return markup
