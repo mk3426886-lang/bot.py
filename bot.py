@@ -80,12 +80,10 @@ def main_inline_keyboard(user_id):
                    types.InlineKeyboardButton("🗑️ حذف ملف معين", callback_data="admin_delete_specific"))
         markup.add(types.InlineKeyboardButton("⚠️ حذف جميع الملفات (أدمن)", callback_data="admin_delete_all_files"))
     else:
-        if user_db.get(uid, {}).get("type") == "month":
-            markup.add(types.InlineKeyboardButton("👑 اشتراك VIP شهري فعال", callback_data="vip_status"))
-        else:
-            markup.add(types.InlineKeyboardButton("🔄 تمديد التفعيل المجاني", callback_data="auto_extend_free"))
+      if user_db.get(uid, {}).get("type") == "month":
+    markup.add(types.InlineKeyboardButton("👑 اشتراك VIP شهري فعال", callback_data="vip_status"))
     
-    markup.add(types.InlineKeyboardButton("🛠️ الدعم الفني | تفعيل اشتراك", url="https://t.me/D_D_C_D"))
+    markup.add(types.InlineKeyboardButton("🛠️ الدعم الفني | تفعيل اشتراك", url="https://t.me/QW_LE1"))
     return markup
 
 def file_control_keyboard(file_name):
